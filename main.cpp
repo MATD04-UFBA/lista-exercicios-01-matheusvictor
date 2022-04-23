@@ -34,7 +34,15 @@ int main() {
     for (unsigned int i=0; i < TAMANHO_MAXIMO; i++) {
         cout << vetor[i] << " ";
     }
-    cout << endl << " ************************************************ " << endl;
+    cout << endl << " ************************************************ " << endl;    
+    
+    cout << "Ordenando o vetor... ";
+    sort(vetor.begin(), vetor.end());
+ 
+    cout << "Vetor ordenado: " << endl;
+    for (auto x : vetor) cout << x << " ";
+    cout << endl << " ************************************************ " << endl;    
+
 
     for (unsigned int i=0; i < TAMANHO_MAXIMO / 2; i++) {
         int chaveAleatoria = rand() % 100;
