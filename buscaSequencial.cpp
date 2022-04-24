@@ -1,16 +1,12 @@
-#include <vector>
-#include <iostream>
 #include "buscaSequencial.h"
 
-using namespace std;
 
-
-bool buscaSequencial(vector<int> v, int chaveBusca) {
-    int contador = 0;
-
-    while(contador < v.size() && v[contador] != chaveBusca)
-        contador++;
-
-    if(contador == v.size()) return false; else return true;
+int buscaSequencial(vector<int> v, int chaveBusca) {
+    for (int i=0; i < v.size(); i++){
+        if(chaveBusca == v[i]){
+            return i + 1;
+        }
+    }
+    return -1;
 }
 
