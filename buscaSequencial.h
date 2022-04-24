@@ -1,3 +1,10 @@
+#include <limits>
 #include <vector>
+#include <cstdlib>
+#include <iostream>
+#include <algorithm>
 
-bool buscaSequencial(std::vector<int> v, int chaveBusca);
+using namespace std;
+
+// bool buscaSequencial(vector<int> v, int chaveBusca, int *quantidadeComparacoes);
+int buscaSequencial(vector<int> v, int chaveBusca);
