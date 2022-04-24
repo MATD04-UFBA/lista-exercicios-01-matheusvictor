@@ -12,3 +12,5 @@ using namespace std;
 vector<int> gerarVetorDesordenado();
 
 vector<int> ordenarVetor(vector<int> vetor);
+
+int gerarChaveAleatoria();

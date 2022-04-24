@@ -1,4 +1,4 @@
-#include "geraVetores.h"
+#include "utils.h"
 
 vector<int> gerarVetorDesordenado(){
 
@@ -17,4 +17,10 @@ vector<int> ordenarVetor(vector<int> vetor) {
     sort(vetor.begin(), vetor.end()); // ordena o vetor
     return vetor;
     
+}
+
+int gerarChaveAleatoria(){    
+    SEMENTE;
+    unsigned int chaveBusca = (rand() % 100);
+    return chaveBusca;    
 }
