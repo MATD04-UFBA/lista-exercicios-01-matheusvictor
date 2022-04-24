@@ -2,10 +2,6 @@
 #include "buscaSequencial.h"
 
 
-void testeContador(vector<int> v, int chaveBusca, int &enderecoQuantidadeComparacoes) {
-    enderecoQuantidadeComparacoes++;    
-}
-
 int main() {
 
     // unsigned int chaveBusca = (rand() % 100);
@@ -25,33 +21,21 @@ int main() {
     for (auto x : vetorOrdenado)
         cout << x << " ";
     cout << "\n";
-
+    cout << "**********************" << endl;
     cout << "No vetor ORDENADO, a chave " << chaveBusca << " foi encontrada na posicao " << buscaSequencial(vetorOrdenado, chaveBusca) << endl;
     cout << "No vetor DESORDENADO, a chave " << chaveBusca << " foi encontrada na posicao " << buscaSequencial(vetorDesordenado, chaveBusca) << endl;
-
     cout << "**********************" << endl;
 
     int contadorVetorOrdenado = 0;
     contadorComparacoesBuscaSequencial(vetorOrdenado, chaveBusca, contadorVetorOrdenado);
-
-    cout << contadorVetorOrdenado << endl;
-
-    // int X = 0;
-    // int *ponteiro = &X;    
-
-    // cout << "Endereco: " << &X << endl;
-    // cout << "O valor da variavel X eh: " << *ponteiro << endl;
-    // X++;
-    // cout << "O valor da variavel X eh: " << *ponteiro << endl;
-
-    // cout << "***********" << endl;
-
-    // int Y = 0;
-    // for(int i=0; i <5; i++){
-    //     testeContador(vetorOrdenado, chaveBusca, Y);
-    //     cout << Y << endl;
-    // }
     
+    int contadorVetorDesordenado = 0;
+    contadorComparacoesBuscaSequencial(vetorDesordenado, chaveBusca, contadorVetorDesordenado);
+
+    cout << "No vetor ORDENADO, foram feitas " << contadorVetorOrdenado << " comparacoes!" << endl;
+    cout << "No vetor DESORDENADO, foram feitas " << contadorVetorDesordenado << " comparacoes!" << endl;
+    cout << "**********************" << endl;    
+
     system("pause");
 
     return 0;
