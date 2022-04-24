@@ -10,3 +10,15 @@ int buscaSequencial(vector<int> v, int chaveBusca) {
     return -1;
 }
 
+void contadorComparacoesBuscaSequencial(vector<int> v, int chaveBusca, int &enderecoQuantidadeComparacoes) {
+
+    for (int i=0; i < v.size(); i++){
+        enderecoQuantidadeComparacoes++;
+
+        if(chaveBusca == v[i]){
+            break;
+        }
+    }
+
+}
+

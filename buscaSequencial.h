@@ -6,5 +6,6 @@
 
 using namespace std;
 
-// bool buscaSequencial(vector<int> v, int chaveBusca, int *quantidadeComparacoes);
 int buscaSequencial(vector<int> v, int chaveBusca);
+
+void contadorComparacoesBuscaSequencial(vector<int> v, int chaveBusca, int &enderecoQuantidadeComparacoes);
