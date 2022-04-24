@@ -9,32 +9,48 @@ int main() {
     vector<int> vetorDesordenado = gerarVetorDesordenado();
     vector<int> vetorOrdenado = ordenarVetor(vetorDesordenado);
 
-    cout << "Chave gerada: " << chaveBusca << endl;
+	cout << "=======================================" << endl;
+	cout << "CHAVE GERADA = " << chaveBusca << endl;
+	cout << "=======================================" << endl;
 
     // imprimir os dois vetores
-    cout << "Vetor desordenado: ";
+    cout << "Vetor DESORDENADO: ";
     for (auto x : vetorDesordenado)
         cout << x << " ";
     cout << "\n";
 
-    cout << "Vetor ordenado: ";
+    cout << "Vetor ORDENADO: ";
     for (auto x : vetorOrdenado)
         cout << x << " ";
     cout << "\n";
-    cout << "**********************" << endl;
-    cout << "No vetor ORDENADO, a chave " << chaveBusca << " foi encontrada na posicao " << buscaSequencial(vetorOrdenado, chaveBusca) << endl;
-    cout << "No vetor DESORDENADO, a chave " << chaveBusca << " foi encontrada na posicao " << buscaSequencial(vetorDesordenado, chaveBusca) << endl;
-    cout << "**********************" << endl;
 
     int contadorVetorOrdenado = 0;
-    contadorComparacoesBuscaSequencial(vetorOrdenado, chaveBusca, contadorVetorOrdenado);
-    
     int contadorVetorDesordenado = 0;
-    contadorComparacoesBuscaSequencial(vetorDesordenado, chaveBusca, contadorVetorDesordenado);
+    
+    cout << "=======================================" << endl;
+	cout << "|          NO VETOR DESORDENADO       |" << endl;
+	cout << "=======================================" << endl;
+    
+    int posicaoChaveVetorDesordenado = posicaoChaveBuscaSequencial(vetorDesordenado, chaveBusca, contadorVetorDesordenado);        
 
-    cout << "No vetor ORDENADO, foram feitas " << contadorVetorOrdenado << " comparacoes!" << endl;
-    cout << "No vetor DESORDENADO, foram feitas " << contadorVetorDesordenado << " comparacoes!" << endl;
-    cout << "**********************" << endl;    
+    cout << "* Foram feitas " << contadorVetorDesordenado << " comparacoes!" << endl;  
+
+    if (posicaoChaveVetorDesordenado != -1){
+        cout << "* A chave foi encontrada na posicao " << posicaoChaveVetorDesordenado << endl;        
+    } else
+        cout << "* A chave buscada nao foi encontrada!" << endl;
+    
+    cout << "=======================================" << endl;
+	cout << "|          NO VETOR ORDENADO          |" << endl;
+	cout << "=======================================" << endl;
+
+    int posicaoChaveVetorOrdenado = posicaoChaveBuscaSequencial(vetorOrdenado, chaveBusca, contadorVetorOrdenado);
+    
+    cout << "* Foram feitas " << contadorVetorOrdenado << " comparacoes!" << endl; 
+    if (posicaoChaveVetorOrdenado != -1) {
+        cout << "* A chave foi encontrada na posicao " << posicaoChaveVetorOrdenado << endl;        
+    } else
+        cout << "* A chave buscada nao foi encontrada!" << endl;
 
     system("pause");
 

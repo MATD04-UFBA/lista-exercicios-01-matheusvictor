@@ -9,3 +9,5 @@ using namespace std;
 int buscaSequencial(vector<int> v, int chaveBusca);
 
 void contadorComparacoesBuscaSequencial(vector<int> v, int chaveBusca, int &enderecoQuantidadeComparacoes);
+
+int posicaoChaveBuscaSequencial(vector<int> v, int chaveBusca, int &enderecoQuantidadeComparacoes);
