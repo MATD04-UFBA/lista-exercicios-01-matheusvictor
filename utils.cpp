@@ -1,12 +1,11 @@
 #include "utils.h"
 
-vector<int> gerarVetorDesordenado(){
 
-    SEMENTE;
+vector<int> gerarVetorDesordenado(int tamanhoVetor){
     vector<int> vetorDesordenado;    
 
-    for (unsigned int i=0; i < TAMANHO_MAXIMO; i++) {        
-        vetorDesordenado.push_back(rand() % 100); // números randômicos de 0 a 100
+    for (unsigned int i=0; i < tamanhoVetor; i++) {        
+        vetorDesordenado.push_back(rand() % tamanhoVetor); // números randômicos de 0 a 100
     }
     
     return vetorDesordenado;
@@ -19,8 +18,7 @@ vector<int> ordenarVetor(vector<int> vetor) {
     
 }
 
-int gerarChaveAleatoria(){    
-    SEMENTE;
-    unsigned int chaveBusca = (rand() % 100);
+int gerarChaveAleatoria(int maximo){    
+    unsigned int chaveBusca = (rand() % maximo);
     return chaveBusca;    
 }

@@ -6,11 +6,9 @@
 
 using namespace std;
 
-#define TAMANHO_MAXIMO 10
-#define SEMENTE srand(time(NULL))
 
-vector<int> gerarVetorDesordenado();
+vector<int> gerarVetorDesordenado(int tamanhoVetor);
 
 vector<int> ordenarVetor(vector<int> vetor);
 
-int gerarChaveAleatoria();
+int gerarChaveAleatoria(int maximo);
